@@ -1,0 +1,18 @@
+$font-family: "Hind Vadodara", sans-serif;
+$color-pink: #e71757;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  font-family: $font-family;
+  background-color: #EAEFF4;
+  color: #333;
+}

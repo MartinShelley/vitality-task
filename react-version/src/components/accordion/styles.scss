@@ -1,0 +1,110 @@
+$color-pink: #e71757;
+
+.accordion__item {
+  border-top: 1px solid #ccc;
+
+  &:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+
+  &:hover .accordion__title {
+    color: $color-pink;
+  }
+}
+
+.accordion__item--open {
+  .accordion__title {
+    color: $color-pink;
+  }
+  .accordion__marker {
+    transform: rotate(180deg); 
+  }
+
+  .accordion__content {
+    height: 100%;
+  }
+}
+
+.accordion__item--closed {
+  .accordion__content {
+    height: 0;
+  }
+}
+
+.accordion__title__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  user-select: none;
+  cursor: pointer;
+  padding: 1.5rem;
+
+  @media (max-width: 767px) {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.accordion__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+}
+
+.accordion__title__icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+.accordion__marker {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #F5F7FA;
+
+  svg {
+    height: 20px;
+    width: 18px;
+  }
+}
+
+.accordion__content {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 60rem;
+  overflow: hidden;
+
+  p {
+    padding: 0 1.75rem 2rem 1.5rem;
+
+    @media (max-width: 1000px) {
+      padding: 0 1.75rem 1.5rem 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0 1.5rem 1.5rem 1rem;
+    }
+
+    @media (max-width: 374px) {
+      padding: 0 1.5rem 1rem 1rem;
+    }
+  }
+}
