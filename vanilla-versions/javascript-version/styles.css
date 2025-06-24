@@ -118,6 +118,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: #333;
 }
 @media (max-width: 767px) {
   .accordion__title {
